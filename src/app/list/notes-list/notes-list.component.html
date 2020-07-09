@@ -1,0 +1,20 @@
+<div class="main-container">
+    <div class="search-bar-container">
+        <div class="form-group">
+             <!--(keyup)="filter($event.target.value)"-->
+             <span>
+              <i class="fas fa-search"></i>
+             </span>
+                <input  type="text" class="form-control" placeholder="Filter" [(ngModel)]="filterNote">
+        </div>
+    </div>
+    <div class="notes-list">
+        <app-note-card *ngFor="let note of notes | search:filterNote;index as i"
+        [link]="i"
+        (delete)="delete(i)"
+        [title]="note.title"
+        [message]="note.message"> <!--filteredNotes-->
+      </app-note-card>
+    </div>
+    <button type="button" class="btn btn-primary" routerLink="new">Add</button>
+</div>

@@ -1,0 +1,38 @@
+.main-container{
+    margin:auto;
+    padding-top: 12px;
+    height:100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width:500px;
+}
+.notes-list{
+    //margin-bottom: 70px;
+    overflow:scroll;
+    margin-top:70px;
+    position: relative;
+}
+app-note-card{
+    display: block;
+    margin-bottom:25px;
+
+}
+.btn-primary{
+    position: fixed;
+    top:144px;
+
+    width:500px;
+
+}
+span{
+    position: absolute;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    margin-left: 6px;
+}
+input{
+    padding-left: 25px;
+
+}
